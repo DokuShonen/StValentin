@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saint-Valentin - Poème d'amour</title>
+    <link rel="stylesheet" href="styles-page2.css">
+</head>
+<body>
+    <div class="container">
+        <h1>❤️ Poème pour <span id="valentine-name"></span> ❤️</h1>
+        <p id="poeme"></p>
+        <div class="declaration">
+            <h2>Je t'aime</h2>
+            <p id="valentine-name-footer"></p>
+        </div>
+    </div>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const nom = urlParams.get('nom');
+        const valentine = urlParams.get('valentine');
+
+        document.getElementById('valentine-name').textContent = valentine;
+        document.getElementById('valentine-name-footer').textContent = valentine;
+
+        // Liste de poèmes en français
+        const poemes = [
+            `À toi, ${valentine}, mon amour éternel,<br>
+            Tu es pour moi comme un soleil immortel.<br>
+            Chaque jour avec toi est une douce mélodie,<br>
+            Et mon cœur chante pour toi, ma chérie.`,
+
+            `Dans tes yeux, ${valentine}, je vois mon avenir,<br>
+            Un monde où tout semble s'épanouir.<br>
+            Ton sourire est ma lumière,<br>
+            Et ton amour, ma plus belle prière.`,
+
+            `Je t'aime, ${valentine}, plus que les mots ne peuvent dire,<br>
+            Plus que les étoiles ne peuvent briller.<br>
+            Tu es mon rêve, ma réalité,<br>
+            Et pour toujours, tu seras ma moitié.`,
+
+            `Avec toi, ${valentine}, chaque instant est magique,<br>
+            Comme une douce musique, une mélodie unique.<br>
+            Tu es mon cœur, mon âme, mon tout,<br>
+            Et sans toi, le monde serait sans goût.`,
+
+            `Mon amour pour toi, ${valentine}, est infini,<br>
+            Comme un océan profond, jamais tari.<br>
+            Tu es ma force, mon guide, mon étoile,<br>
+            Et dans tes bras, je trouve ma paix et mon voile.`
+        ];
+
+        // Sélection aléatoire d'un poème
+        const poemeAleatoire = poemes[Math.floor(Math.random() * poemes.length)];
+        document.getElementById('poeme').innerHTML = poemeAleatoire;
+    </script>
+</body>
+</html>
