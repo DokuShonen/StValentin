@@ -28,7 +28,7 @@ body {
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 2rem;
     margin-bottom: 20px;
     animation: float 3s ease-in-out infinite;
 }
