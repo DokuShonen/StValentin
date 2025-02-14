@@ -14,6 +14,8 @@
             <h2>Je t'aime</h2>
             <p id="valentine-name-footer"></p>
         </div>
+        <!-- Nombre de poèmes disponibles -->
+        <p class="poeme-count">Nombre de poèmes disponibles : <span id="poeme-count"></span></p>
     </div>
     <!-- Pied de page -->
     <footer>
@@ -27,6 +29,7 @@
         document.getElementById('valentine-name').textContent = valentine;
         document.getElementById('valentine-name-footer').textContent = valentine;
 
+        // Liste de poèmes en français
         const poemes = [
             `À toi, ${valentine}, mon amour éternel,<br>
             Tu es pour moi comme un soleil immortel.<br>
@@ -54,6 +57,10 @@
             Et dans tes bras, je trouve ma paix et mon voile.`
         ];
 
+        // Afficher le nombre de poèmes disponibles
+        document.getElementById('poeme-count').textContent = poemes.length;
+
+        // Sélection aléatoire d'un poème
         const poemeAleatoire = poemes[Math.floor(Math.random() * poemes.length)];
         document.getElementById('poeme').innerHTML = poemeAleatoire;
     </script>
