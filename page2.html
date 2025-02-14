@@ -15,6 +15,10 @@
             <p id="valentine-name-footer"></p>
         </div>
     </div>
+    <!-- Pied de page -->
+    <footer>
+        <p>Créé avec ❤️ par <strong>Doku Shonen</strong></p>
+    </footer>
     <script>
         const urlParams = new URLSearchParams(window.location.search);
         const nom = urlParams.get('nom');
@@ -23,7 +27,6 @@
         document.getElementById('valentine-name').textContent = valentine;
         document.getElementById('valentine-name-footer').textContent = valentine;
 
-        // Liste de poèmes en français
         const poemes = [
             `À toi, ${valentine}, mon amour éternel,<br>
             Tu es pour moi comme un soleil immortel.<br>
@@ -51,7 +54,6 @@
             Et dans tes bras, je trouve ma paix et mon voile.`
         ];
 
-        // Sélection aléatoire d'un poème
         const poemeAleatoire = poemes[Math.floor(Math.random() * poemes.length)];
         document.getElementById('poeme').innerHTML = poemeAleatoire;
     </script>
