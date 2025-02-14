@@ -1,3 +1,4 @@
+/* Styles généraux */
 body {
     background-image: url('fond-page1.jpg');
     background-size: cover;
@@ -5,10 +6,12 @@ body {
     font-family: 'Great Vibes', cursive;
     color: #fff;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
+    overflow: hidden;
 }
 
 .container {
@@ -18,10 +21,13 @@ body {
     border-radius: 15px;
     box-shadow: 0 0 20px rgba(255, 0, 85, 0.5);
     animation: fadeIn 2s ease-in-out;
+    max-width: 400px;
+    width: 90%;
+    backdrop-filter: blur(5px);
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin-bottom: 20px;
     animation: heartbeat 1.5s infinite;
 }
@@ -56,15 +62,6 @@ button:hover {
     background-color: #e6004c;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-@keyframes heartbeat {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-}
 /* Styles pour le pied de page */
 footer {
     position: fixed;
@@ -82,5 +79,16 @@ footer {
 }
 
 footer strong {
-    color: #ffeb3b; /* Couleur jaune pour mettre en valeur votre pseudo */
+    color: #ffeb3b;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
 }
