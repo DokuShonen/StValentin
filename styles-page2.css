@@ -6,6 +6,7 @@ body {
     font-family: 'Great Vibes', cursive;
     color: #fff;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -22,6 +23,8 @@ body {
     animation: fadeIn 2s ease-in-out;
     max-width: 600px;
     width: 90%;
+    backdrop-filter: blur(5px);
+    margin-bottom: 80px; /* Espace pour le pied de page */
 }
 
 h1 {
@@ -30,9 +33,15 @@ h1 {
     animation: float 3s ease-in-out infinite;
 }
 
+.poeme-container {
+    max-height: 200px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+}
+
 #poeme {
     font-size: 1.5rem;
-    margin-bottom: 30px;
+    line-height: 1.6;
     animation: slideIn 2s ease-in-out;
 }
 
@@ -43,17 +52,13 @@ h1 {
 h2 {
     font-size: 4rem;
     animation: pulse 2s infinite;
+    margin-bottom: 10px;
 }
 
 #valentine-name-footer {
     font-size: 2rem;
     animation: fadeIn 3s ease-in-out;
-}
-
-.poeme-count {
-    font-size: 1.2rem;
-    margin-top: 20px;
-    animation: fadeIn 3s ease-in-out;
+    color: #ffeb3b;
 }
 
 /* Styles pour le pied de page */
@@ -73,7 +78,7 @@ footer {
 }
 
 footer strong {
-    color: #ffeb3b; /* Couleur jaune pour mettre en valeur votre pseudo */
+    color: #ffeb3b;
 }
 
 /* Animations */
